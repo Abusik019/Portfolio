@@ -1,0 +1,45 @@
+@import '../abstracts/mixins';
+
+.arrow_container{
+    @include size(640px, 260px);
+    display: flex;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    &>.prev, .next{
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #212121;
+        background-color: #141414;
+        outline: none;
+        transition: all .2s ease;
+        cursor: pointer;
+
+        &>img{
+            width: 70px;
+        }
+
+        &:hover{
+            background-color: #212121;
+        }
+    }
+
+    &>.prev{
+        transition: padding .2s ease;
+
+        &:hover{
+            padding-right: 30px;
+        }
+    }
+    
+    &>.next{
+        transition: padding .2s ease;
+
+        &:hover{
+            padding-left: 30px;
+        }
+    }
+}

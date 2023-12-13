@@ -1,0 +1,69 @@
+@import '../abstracts/mixins';
+
+.header{
+    height: 15vh;
+
+    width: 100%;
+
+    background-color: #141414;
+
+    position: fixed;
+    z-index: 5;
+
+    &>.header_nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        
+
+        &>li{
+            border: 1px solid #212121;
+            @include size(33.3%, 100%);
+        }
+
+        &>.header_logo{
+            display: flex;
+            align-items: center;
+            box-sizing: border-box;
+            padding-left: 50px;
+            height: 101%;
+
+            &>h1{
+                @include font(36px, 36px, 700);
+                color: #fff;
+
+                display: flex;
+                align-items: center;
+                gap: 12px;
+            }
+        }
+
+        &>.header_info{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+            &>a{
+                @include font(24px, 24px, 400);
+                color: #fff;
+                cursor: pointer;
+            }
+        }
+
+        &>.header_contacts{
+           display: flex;
+           justify-content: center;
+           gap: 50px;
+           align-items: center;
+
+           &>a {
+            cursor: pointer;
+
+            &>img{
+                @include size(50px, 50px);
+             }
+           }
+        }
+    }
+}
